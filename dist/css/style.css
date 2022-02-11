@@ -480,14 +480,17 @@ body {
   padding-bottom: 350px;
 }
 
-.no-webp .intro__slide_one{
-  background: url("../img/intro/intro-bg-one.jpg") 0 100%/cover no-repeat; }
+.intro__slide_one {
+  background: url("../img/intro/intro-bg-one.jpg") 0 100%/cover no-repeat;
+}
 
-.no-webp .intro__slide_two{
-  background: url("../img/intro/intro-bg-two.jpg") 0 100%/cover no-repeat; }
+.intro__slide_two {
+  background: url("../img/intro/intro-bg-two.jpg") 0 100%/cover no-repeat;
+}
 
-.no-webp .intro__slide_three{
-  background: url("../img/intro/intro-bg-three.jpg") 0 100%/cover no-repeat; }
+.intro__slide_three {
+  background: url("../img/intro/intro-bg-three.jpg") 0 100%/cover no-repeat;
+}
 
 .intro__container_pagination {
   position: relative;
@@ -815,10 +818,8 @@ body {
   line-height: 162%;
 }
 
-.no-webp .partner{
-  background: url("../img/partner/partner-bg.jpg") 20% 0/cover no-repeat; }
-
 .partner {
+  background: url("../img/partner/partner-bg.jpg") 20% 0/cover no-repeat;
   margin-bottom: 80px;
 }
 
@@ -942,12 +943,10 @@ body {
   padding: 0 28px;
 }
 
-.no-webp .companies{
-  background: url("../img/companies/companies-bg.jpg") 35% 0/cover no-repeat; }
-
 .companies {
   text-align: center;
   margin-bottom: 60px;
+  background: url("../img/companies/companies-bg.jpg") 35% 0/cover no-repeat;
   padding-top: 300px;
   padding-bottom: 310px;
 }
@@ -1243,11 +1242,9 @@ body {
   opacity: 0.85;
 }
 
-.no-webp .footer{
-  background: url("../img/footer/bg-footer.jpg") 0 0/cover no-repeat; }
-
 .footer {
   padding-top: 300px;
+  background: url("../img/footer/bg-footer.jpg") 0 0/cover no-repeat;
 }
 
 .footer__wrapper {
@@ -2775,15 +2772,3 @@ button.swiper-pagination-bullet {
     padding-top: calc(31.25rem + -12.5 * (((100vw - 20rem)) / ((55))));
   }
 }
-
-.webp .intro__slide_one{ background: url(../img/intro/intro-bg-one.webp) 0 100%/cover no-repeat; }
-
-.webp .intro__slide_two{ background: url(../img/intro/intro-bg-two.webp) 0 100%/cover no-repeat; }
-
-.webp .intro__slide_three{ background: url(../img/intro/intro-bg-three.webp) 0 100%/cover no-repeat; }
-
-.webp .partner{ background: url(../img/partner/partner-bg.webp) 20% 0/cover no-repeat; }
-
-.webp .companies{ background: url(../img/companies/companies-bg.webp) 35% 0/cover no-repeat; }
-
-.webp .footer{ background: url(../img/footer/bg-footer.webp) 0 0/cover no-repeat; }
