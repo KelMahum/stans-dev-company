@@ -1244,7 +1244,7 @@ body {
 
 .footer {
   padding-top: 300px;
-  background: url("../img/footer/bg-footer.jpg") 0 0/cover no-repeat;
+  background: url("../img/footer/bg-footer.jpg") 90% 0/cover no-repeat;
 }
 
 .footer__wrapper {
@@ -2599,10 +2599,6 @@ button.swiper-pagination-bullet {
     line-height: 1.875rem;
   }
 
-  .footer {
-    padding-top: 31.25rem;
-  }
-
   .footer .sub-info__wrapper {
     gap: 1.25rem;
   }
@@ -2764,11 +2760,5 @@ button.swiper-pagination-bullet {
 @media (min-width: 20em) and (max-width: 70.625em) {
   .contacts__info {
     gap: calc(4.1875rem + 1.4375 * (((100vw - 20rem)) / ((50.625))));
-  }
-}
-
-@media (min-width: 20em) and (max-width: 75em) {
-  .footer {
-    padding-top: calc(31.25rem + -12.5 * (((100vw - 20rem)) / ((55))));
   }
 }

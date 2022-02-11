@@ -1,7 +1,7 @@
 .footer {
     padding-top: 300px;
-    background: url('@img/footer/bg-footer.jpg') 0 0 / cover no-repeat;
-    @include adaptiveValue('padding-top', 300, 500, 1200);
+    background: url('@img/footer/bg-footer.jpg') 90% 0 / cover no-repeat;
+    // @include adaptiveValue('padding-top', 300, 500, 1200);
     &__wrapper {
         padding-bottom: 50px;
     }
