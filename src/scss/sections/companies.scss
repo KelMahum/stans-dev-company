@@ -1,0 +1,69 @@
+.companies {    
+    text-align: center;
+    margin-bottom: 60px;
+    background: url('@img/companies/companies-bg.jpg') 35% 0 / cover no-repeat;
+    padding-top: 300px;
+    padding-bottom: 310px;
+    @include adaptiveValue('padding-top', 300, 220, 1600);
+    @include adaptiveValue('padding-bottom', 310, 230, 1600);
+
+    &__title {    
+        margin-bottom: 80px;
+        @include adaptiveValue('margin-bottom', 80, 40, 1600);
+    }
+
+    &__cards {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px 24px;
+        margin-bottom: 25px;
+    }
+
+    &__card {
+        border-radius: 16px;
+        box-shadow: 0px 3px 16px 4px #1D336B1A;
+        flex-basis: 320px;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: white;
+        @include adaptiveValue('flex-basis', 320, 130, 1600);
+        @include adaptiveValue('height', 160, 73, 1600);
+
+        & > img {   
+            max-width: 100%;
+            max-height: 100%;
+            padding: 15px;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+    }
+
+    &__showmore{
+        display: none;
+        color: #194484;
+        line-height: 162%;
+        @media (max-width: 587px){
+            display: inline-block;
+        }
+        &_active{
+            &:after{
+                transform: rotate(-135deg) !important;
+                margin-bottom: -2px !important;
+            }
+        }
+        &:after{
+            content: "";
+            border: solid #194484;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            margin: 0 0 2px 5px;
+            transform: rotate(45deg);
+        }
+    }
+}

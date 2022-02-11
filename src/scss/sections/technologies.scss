@@ -1,0 +1,183 @@
+.technologies {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 120px;
+    @include adaptiveValue('margin-bottom', 120, 80, 1600);
+
+    &__wrapper{
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+        @include adaptiveValue('margin-bottom', 60, 22, 1600);
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 38px;
+        @include adaptiveValue('font-size', 24, 18, 1600);
+        &_main{
+            margin-bottom: 30px;
+        }
+        &_secondary{
+            margin-bottom: 120px;
+            @include adaptiveValue('margin-bottom', 120, 80, 1600);
+        }
+        & > span {
+            font-weight: 700;
+            &:first-child{
+                color: #194484;
+            }
+            &:last-child{
+                color: #00A4E8;
+            }
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 80px;
+        align-items: center;
+        margin-bottom: 30px;
+        @include adaptiveValue('gap', 80, 35, 1600);
+    }
+    .icons{
+        &__body{
+            background-color: black;
+            width: 64px;
+            height: 64px;
+            box-shadow: 0px 4px 12px rgba(41, 24, 111, 0.2);
+            border-radius: 16px;
+            position: relative;
+            &_green{
+                background-color: #06B25F;
+            }
+            &_blue{
+                background-color: #276ED8;
+            }
+            &_light-blue{
+                background-color: #84B5FF;
+            }
+            & > svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                fill: white;
+                width: 35px;
+                height: 40px;
+            }
+        }
+    }
+    
+    .reviews{
+        box-shadow: 0px 3px 16px 2px rgba(29, 51, 107, 0.15);
+        border-radius: 16px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 80px;
+        padding: 30px;
+        @include adaptiveValue('gap', 80, 30, 900, 800, 1);
+        @media (max-width: 380px){
+            padding: 30px 15px 50px 15px;
+        }
+       
+        &__main {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        &__rating-value{
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 38px;
+        }
+        
+        .stars{
+            display: flex;
+            align-items: flex-end;
+            font-size: 30px;
+            color: #E1E1E1;
+            line-height: 0.75;
+           
+            &__wrapper{
+                position: relative;
+                &:before{
+                    content: '★★★★★';
+                    display: block;
+                }
+            }
+
+            &__items{
+                display: flex;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            &__item{
+                flex: 0 0 20%;
+                height: 100%;
+                opacity: 0;
+            }
+
+            &__active{
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                &:before{
+                    content: '★★★★★';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    color: #06B25F;
+                }
+            }
+            
+        }
+
+        &__check {
+        font-weight: 700;
+        line-height: 36px;
+        text-align: center;
+        background-color: #06B25F;
+        border-radius: 6px;
+        color: white;
+        text-transform: uppercase;
+        min-height: 42px;
+        width: 230px;
+        transition: all 0.15s;
+        &:hover, &:focus{
+            background-color: #06b25fdc;
+        }
+        }
+    
+    }
+}
+
+.page-title{
+    font-family: 'Harabara';
+    font-size: 36px;
+    color: #194484;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include adaptiveValue('font-size', 36, 22, 1600);  
+}

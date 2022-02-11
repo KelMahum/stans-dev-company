@@ -1,0 +1,122 @@
+.footer {
+    padding-top: 300px;
+    background: url('@img/footer/bg-footer.jpg') 0 0 / cover no-repeat;
+    @include adaptiveValue('padding-top', 300, 500, 1200);
+    &__wrapper {
+        padding-bottom: 50px;
+    }
+
+    &__blocks {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 45px;
+    }
+
+    &__pictures {
+        margin-top: -20px;
+        flex-basis: 15.5%;
+        @media (max-width: 600px){
+            flex-basis: 100%;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 53px;
+        @media (max-width: 600px){
+            text-align: center;
+        }
+    }
+
+
+    &__icons {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 45px;
+        @media (max-width: 600px){
+            justify-content: center;
+            gap: 45px 60px;
+        }
+
+        & > a {
+
+            &:first-child > svg{
+                fill: #66D6A0;
+            }
+
+            & > svg{
+                width: 40px;
+                height: 40px;
+                fill: white;
+                
+            }
+        }
+    }
+
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        align-items: flex-start;
+    
+        &__link {
+            font-family: 'Harabara';
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: 0.07em;
+            color: white;
+            &:hover, &:focus{
+                opacity: 0.85;
+            }
+        }
+
+        &__sublist {
+            display: flex;
+            flex-flow: column wrap;
+            gap: 18px;
+            padding-left: 16px;
+        }
+    
+        &__sublink {
+            color: white;
+            line-height: 20px;
+            &:hover, &:focus{
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .sub-info{
+        background-color: white;
+        &__wrapper{
+            display: flex;
+            flex-flow: row wrap;
+            padding: 20px 30px;
+            gap: 140px;
+            @include adaptiveValue('gap', 140, 20, 1600);
+        }
+        &__link{
+            font-size: 14px;
+            line-height: 19px;
+            transition: all 0.3s;
+           &_main{
+            flex-grow: 1;
+                &:before{
+                    content: '©';
+                    display: inline-block;
+                }
+           }
+            &:hover, &:focus{
+              color: #0D6EB7;
+
+           }
+        }
+        &__policy{
+            display: flex;
+            gap: 140px;
+            @include adaptiveValue('gap', 140, 20, 1600);
+        }
+    }
+}

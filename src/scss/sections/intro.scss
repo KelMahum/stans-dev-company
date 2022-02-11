@@ -1,0 +1,156 @@
+.intro {
+    margin-bottom: 110px;
+    @media (max-width: 600px){
+        margin-bottom: 40px;
+    }
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 551px;
+        @media (max-width: 600px){
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-family: "Harabara";
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 136%;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 16px;
+        @include adaptiveValue('font-size', 44, 24, 1400);
+        @media (max-width: 600px){
+            padding-bottom: 35px;
+        }
+    }
+
+    &__text {
+        color: white;
+        line-height: 162%;
+        margin-bottom: 40px;
+        opacity: 0.9;
+        font-size: 16px;
+        @include adaptiveValue('font-size', 16, 14, 1400);
+        @media (max-width: 600px){
+            display: none;
+        }
+        &_outside{
+            color:#242424;
+            display: none;
+            @media (max-width: 600px){
+                display: block;
+                margin-bottom: 54px;
+            }
+        }
+    }
+
+    &__buttons {
+        & > button {
+            font-size: 16px;
+            color: white;
+            font-weight: 700;
+            line-height: 225%;
+            text-align: center;
+            min-height: 42px;
+            min-width: 160px;
+            text-transform: uppercase;
+            border: 2px solid white;
+            border-radius: 6px;
+            @include adaptiveValue('min-width', 160, 125, 600);
+            &:not(:last-child){
+                margin-right: 24px;
+            }
+            &:first-child{
+                transition: all 0.15s;
+            }
+            &:first-child:hover, &:first-child:focus {
+                opacity: 0.75;
+            }
+            &>span{
+                opacity: 1 !important;
+            }
+        }
+    }
+    &__btn {
+        &_green{
+            background-color: #06B25F;
+            border: none !important; 
+            transition: all 0.15s;
+            
+            &:hover, &:focus {
+                background-color: rgba(6, 178, 95, 0.82);
+            }
+            &:active{
+                background-color: rgba(6, 178, 95, 0.7);
+            }
+            
+        }
+    }
+    &__slide{
+        padding-top: 230px;
+        padding-bottom: 350px;
+        @include adaptiveValue('padding-top', 230, 140, 1600);
+        @include adaptiveValue('padding-bottom', 350, 140, 1600);
+        
+        @media (max-width: 1260px){
+            background-position: 50% 100% !important;
+        }
+        @media (max-width: 600px){
+            background-position: 60% 100% !important;
+        }
+        &_one{
+            background: url('@img/intro/intro-bg-one.jpg') 0 100%/cover no-repeat;
+        }
+        &_two{
+            background: url('@img/intro/intro-bg-two.jpg') 0 100%/cover no-repeat;
+            ;
+        }
+        &_three{
+            background: url('@img/intro/intro-bg-three.jpg') 0 100%/cover no-repeat;
+        }
+    }
+    &__container{
+        &_pagination{      
+            position: relative;
+            left: 15px;
+            @media (max-width: 991px){
+                display: none;
+            }
+        }
+    }
+}
+
+.swiper-pagination{
+    transform: translateY(-16rem) !important;
+
+    @media (max-width: 1260px){
+        transform: translateY(-12rem) !important;
+    }
+
+    bottom: 0 !important;
+    left: 0 !important;
+    text-align: left !important;
+    @media (max-width: 900px){
+        display: none;
+    }
+}
+.swiper-pagination-bullet{
+    width: 20px !important;
+    height: 20px !important;
+    border: 3px solid #FFFFFF !important; 
+    background-color: transparent !important;
+    opacity: 1 !important;
+    &:not(:last-child){
+        margin-right: 20px !important;
+    }
+}
+.swiper-pagination-bullet-active{
+    border: 1px solid #FFFFFF !important;
+    background-color: white !important;
+}

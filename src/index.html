@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Главная"
+	})
+	<body>
+
+		<div class="wrapper">
+			@@include('components/_header.htm',{})
+
+			<main>
+				@@include('components/_intro.htm')
+				@@include('components/_technologies.htm')
+				@@include('components/_services.htm')
+				@@include('components/_partner.htm')
+				@@include('components/_achievements.htm')
+				@@include('components/_companies.htm')
+				@@include('components/_contacts.htm')
+			</main>
+			
+			@@include('components/_footer.htm')
+		</div>
+		
+		@@include('html/_js.htm',{})
+	</body>
+</html>

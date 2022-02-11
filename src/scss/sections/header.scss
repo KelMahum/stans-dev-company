@@ -1,0 +1,251 @@
+.header {
+	&__blocks {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 80px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		@media (max-width: 1260px){
+			justify-content: space-between;
+		}
+	}
+	&__logo {
+		padding-bottom: 10px;
+	}
+
+	&__menu{
+		display: flex;
+
+		@media (max-width: 1260px){
+			flex-direction: column;
+			width: 320px;
+			position: fixed;
+			top: 0;
+			left: -150%;
+			height: 100vh;
+			background-color: white;
+			box-shadow: 4px 0px 11px 0px rgba(34, 60, 80, 0.55);
+			transition: all 0.4s;
+			padding: 45px 30px 0 30px;
+			&>a{
+				color: #0D6EB7;
+			}
+		}
+	}
+
+	.menu {		
+		@media (max-width: 1260px){
+			padding-bottom: 20px;
+		}
+		&__list{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 20px;
+			padding: 0 30px 0 30px;
+			@media (max-width: 1260px){
+				flex-direction: column;
+				gap: 10px;
+			}
+			// Главные пункты - заголовки
+			& > li {
+				position: relative;
+				&:hover .sub-menu__list {
+					display: block;
+				}
+				@media (max-width: 1260px){
+					font-size: 18px;
+				}
+			}
+		}
+	
+		&__arrow-item{
+			display: flex;
+			align-items: center;
+			gap: 3px;
+			@media (max-width: 1260px){
+				.arrow {
+					display: none;
+				}
+				flex-flow: column wrap;
+				align-items: flex-start;
+				align-content: flex-start;
+			}
+			&:hover .arrow__icon{
+				fill: #44C9FF;
+			}
+			&:hover > a{
+				color: #44C9FF;
+			}
+		}
+
+		.sub-menu{	
+			&__list{
+				display: none;
+				position: absolute;
+				gap: 15px;
+				left: 0;
+				top: 36px;
+				background-color: rgba(33, 33, 33, 0.8);
+				box-shadow: 2px 4px 16px rgba(158, 158, 158, 0.3);
+				border-bottom-left-radius: 16px;
+				border-bottom-right-radius: 16px;
+				border-top: 3px solid #00A4E8;
+				padding: 12px;
+				white-space: nowrap;
+				@media (max-width: 1260px){
+					display: block;
+					background-color: transparent;
+					white-space: normal;
+					border: none;
+					position: static;
+					box-shadow: none;
+					padding: 6px;
+					& > li{
+						font-size: 14px;
+						padding-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	&__close{
+		display: none;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		color: #06B25F;
+		font-size: 18px;
+		font-weight: 600;
+		letter-spacing: -0.5px;
+		cursor: pointer;
+		@media (max-width: 1260px){
+			display: block;
+		}
+	}
+
+	&__contact{	
+		&_inside{
+			display: none;
+			@media (max-width: 1260px){
+				display: block;
+			}
+		}
+		&_outside{
+			@media (max-width: 1260px){
+				display: none;
+			}
+		}
+	}
+
+	.contact{
+		text-align: center;
+		&__button{
+			min-height: 42px;
+			min-width: 160px;
+			font-weight: 700;
+			line-height: 225%;
+			text-transform: uppercase;
+			border-radius: 6px;
+			color: #FFFFFF;
+			border: 2px solid #FFFFFF;
+			transition: all 0.3s;
+			&:hover, &:focus{
+				opacity: 0.75;
+			}
+			@media (max-width: 1260px){
+					border-color: #06B25F;
+					color: #06B25F;
+			}	
+		}
+	}
+
+		
+
+		
+	.active{
+		left: 0;
+	}
+
+	&__burger{
+        display: none;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 15;
+		@media (max-width: 1260px){
+			display: block;
+		}
+        &:before, &:after{
+            content: "";
+            background-color: white;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            transition: all 0.3s;
+			border-radius: 3px;
+        }
+        &:before{
+            top: 0;
+        }
+        &:after{
+            bottom: 0;
+        }
+        &>span{
+            position: absolute;
+            background-color: white;
+            left: 0;
+            width: 100%;
+            height: 3px;   
+			border-radius: 3px;
+            top: 9px; 
+            transition: all 0.3s;
+        }
+
+        &.active{
+            &:before{
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            &:after{
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }    
+        }
+        &.active span {
+            transform: scale(0);
+        }
+    }
+}
+
+
+.link-menu{
+	font-weight: 700;
+	line-height: 225%;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	&:focus, &:hover {
+		color: #44C9FF;
+	}
+	@media (max-width: 1260px){
+		color: #0D6EB7;
+	}
+}
+
+.arrow{
+	display: flex;
+	align-items: center;
+	width: 16px;
+	height: 16px;
+	&__icon{
+		fill: white;
+		width: 100%;
+		height: 100%;
+	}
+}

@@ -1,0 +1,52 @@
+.partner {
+    background: url('@img/partner/partner-bg.jpg') 20% 0 / cover  no-repeat;
+    margin-bottom: 80px;
+    &__wrapper {
+        text-align: center;
+        width: 100%;
+        padding: 320px 15px 380px 15px;
+        @include adaptiveValue('padding-top', 320, 128, 1600);
+        @include adaptiveValue('padding-bottom', 380, 118, 1600);
+    }
+
+    &__title {
+        font-family: 'Harabara';
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 136%;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: white;
+        padding-bottom: 16px;
+        @include adaptiveValue('padding-bottom', 16, 12, 1600);
+        @include adaptiveValue('font-size', 44, 24, 1600);
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 29px;
+        padding-bottom: 36px;
+        color: white;
+        @include adaptiveValue('padding-bottom', 36, 24, 1600);
+        @include adaptiveValue('font-size', 24, 16, 1600, 380, 1);
+    }
+
+    &__btn {
+        font-weight: 700;
+        line-height: 225%;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #06B25F;
+        min-height: 42px;
+        width: 160px;
+        text-transform: uppercase;
+        background-color: white;
+        border: 2px solid #06B25F;
+        border-radius: 6px;
+        transition: all 0.3s;
+        &:hover, &:focus {
+            color: white;
+            background-color: #06B25F;
+        }
+    }
+}
